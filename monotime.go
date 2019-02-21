@@ -30,6 +30,10 @@ func Now() time.Duration {
 	return time.Duration(nanotime())
 }
 
+func Raw() int64 {
+	return nanotime()
+}
+
 // Since returns the time elapsed since t, obtained previously using Now.
 func Since(t time.Duration) time.Duration {
 	return Now() - t
